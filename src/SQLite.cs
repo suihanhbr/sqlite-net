@@ -302,7 +302,7 @@ namespace SQLite
 				throw new ArgumentException ("Encryption keys must be strings or byte arrays", nameof (key));
 			}
 			if (openFlags.HasFlag (SQLiteOpenFlags.ReadWrite)) {
-				ExecuteScalar<string> ("PRAGMA journal_mode=WAL");
+				ExecuteScalar<string> ("PRAGMA journal_mode=DELETE");
 			}
 		}
 
